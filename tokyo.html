@@ -213,6 +213,36 @@
     }
     .end h2 { font-size: clamp(2.3rem, 5.5vw, 4.2rem); margin: 8px 0 12px; }
     .end p { color: var(--lav); line-height: 1.7; }
+
+    /* Quellenliste am Ende der Präsentation */
+    .sources {
+      margin-top: 56px;
+      padding: 36px 28px;
+      border-radius: 20px;
+      background: rgba(23, 22, 56, 0.9);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .sources h2 { margin-bottom: 8px; }
+    .sources > p { color: var(--lav); margin-bottom: 18px; line-height: 1.6; }
+    .sources ol {
+      margin: 0;
+      padding-left: 1.35rem;
+      color: var(--white);
+      line-height: 1.75;
+    }
+    .sources li { margin-bottom: 10px; }
+    .sources a {
+      color: #ff9cbd;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .sources a:hover { color: #fbbf24; text-decoration: underline; }
+    .sources .src-note {
+      display: block;
+      color: var(--lav);
+      font-size: 0.88rem;
+      margin-top: 2px;
+    }
     footer {
       position: relative; z-index: 5;
       padding: 28px 20px; text-align: center;
@@ -272,6 +302,7 @@
         <a href="#thema-8">U-Bahn</a>
         <a href="#quiz">Quiz</a>
         <a href="#ende">Ende</a>
+        <a href="#quellen">Quellen</a>
       </nav>
     </div>
   </header>
@@ -423,8 +454,51 @@
       <p class="eyebrow">ありがとう · Arigatō</p>
       <h2>Vielen Dank!</h2>
       <p>Das war unsere kleine Reise durch Tokyo. Danke fürs Anschauen und Mitmachen beim Quiz.</p>
-      <a class="button" href="#start">Zurück zum Anfang ↑</a>
+      <a class="button" href="#quellen">Zu den Quellen →</a>
+      <a class="button" href="#start" style="margin-left:10px;background:rgba(255,255,255,0.12);box-shadow:none;">Zurück zum Anfang ↑</a>
     </section>
+
+    <!-- Quellen: woher die Informationen stammen -->
+    <section class="sources" id="quellen">
+      <p class="eyebrow">Nachweis</p>
+      <h2>Quellen</h2>
+      <p>Die Informationen in dieser Präsentation stammen aus folgenden Quellen (Stand der Recherche: 2026):</p>
+      <ol>
+        <li>
+          <a href="https://de.wikipedia.org/wiki/Tokio" target="_blank" rel="noopener">Wikipedia – Tokio</a>
+          <span class="src-note">Überblick: Lage, Geschichte, Einwohner, Stadtstruktur</span>
+        </li>
+        <li>
+          <a href="https://www.japan-guide.com/e/e2164.html" target="_blank" rel="noopener">japan-guide.com – Tokyo</a>
+          <span class="src-note">Sehenswürdigkeiten, Stadtteile, Reisetipps, Feste</span>
+        </li>
+        <li>
+          <a href="https://www.gotokyo.org/en/" target="_blank" rel="noopener">Go Tokyo (offizielle Tourismusseite)</a>
+          <span class="src-note">Offizielle Informationen zu Attraktionen und Events</span>
+        </li>
+        <li>
+          <a href="https://www.metro.tokyo.lg.jp/english/" target="_blank" rel="noopener">Tokyo Metropolitan Government</a>
+          <span class="src-note">Steckbrief-Daten und Verwaltungsinformationen</span>
+        </li>
+        <li>
+          <a href="https://www.tokyometro.jp/en/" target="_blank" rel="noopener">Tokyo Metro</a>
+          <span class="src-note">U-Bahn-Netz und Stationen</span>
+        </li>
+        <li>
+          <a href="https://www.japan-guide.com/e/e2063.html" target="_blank" rel="noopener">japan-guide.com – Festivals in Japan</a>
+          <span class="src-note">Sanja Matsuri, Kanda Matsuri, Hanami, Feuerwerk</span>
+        </li>
+        <li>
+          <a href="https://www.tokyo-skytree.jp/en/" target="_blank" rel="noopener">Tokyo Skytree – offizielle Website</a>
+          <span class="src-note">Höhe 634 m und Turm-Informationen</span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=D8VlZuUNnLU" target="_blank" rel="noopener">YouTube: Tokyo für Anfänger – Top 10 Highlights (Japan Hautnah)</a>
+          <span class="src-note">Ergänzendes Video (ca. 9 Min., auf Deutsch)</span>
+        </li>
+      </ol>
+    </section>
+
   </main>
 
   <footer>東京 · TOKYO — Eine Entdeckungsreise durch Japans Hauptstadt</footer>
@@ -499,10 +573,7 @@
     }
     // Jeder Themen-Button: Attribut data-image ist die Bild-URL für die Großansicht
     document.querySelectorAll('.image-button').forEach(b => {
-      b.addEventListener('click', () => {
-        const img = b.querySelector('img');
-        openLightbox(img.src, img.alt);
-      });
+      b.addEventListener('click', () => openLightbox(b.querySelector('img').src, b.querySelector('img').alt));
     });
     // Titelbild oben rechts nutzt dasselbe Overlay
     document.querySelector('.hero-image img')?.addEventListener('click', function () {
