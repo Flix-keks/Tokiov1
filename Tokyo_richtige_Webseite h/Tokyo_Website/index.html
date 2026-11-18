@@ -1,0 +1,75 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Entdecke Tokyo: Traditionen, Sehenswürdigkeiten, Geschichte, Steckbrief und Quiz."><meta name="theme-color" content="#100b2d"><title>Tokyo entdecken – Japan</title>
+<style>
+:root{--bg:#0b0923;--panel:#171638;--pink:#ff6b9f;--lav:#cfc7ee;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}.topbar{position:sticky;top:0;z-index:20;background:#0b0923ef;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff1c}
+.nav{max-width:1200px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-weight:950;letter-spacing:.13em;text-decoration:none;white-space:nowrap}.brand b{color:var(--pink)}
+.navlinks{display:flex;gap:7px;overflow-x:auto;white-space:nowrap}.navlinks a{text-decoration:none;color:#e4def5;padding:9px 12px;border-radius:30px;font-size:.86rem}.navlinks a:hover{background:#ffffff18}
+.hero{min-height:610px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px;max-width:1200px;margin:auto;padding:75px 24px}
+.eyebrow{color:var(--pink);font-size:.73rem;font-weight:850;letter-spacing:.2em;text-transform:uppercase}
+h1{font-size:clamp(3.8rem,8vw,7.5rem);letter-spacing:-.075em;line-height:.88;margin:20px 0}h1 span{color:var(--pink)}
+.lead{font-size:1.15rem;line-height:1.8;color:var(--lav);max-width:530px}
+.button{display:inline-block;margin-top:18px;padding:14px 22px;border-radius:999px;background:linear-gradient(100deg,#ff5b9a,#8c62ff);text-decoration:none;font-weight:800;box-shadow:0 12px 35px #e73e8940}
+.hero-image{position:relative}.hero-image img{width:100%;display:block;border-radius:28px;border:1px solid #ffffff30;box-shadow:0 28px 70px #0009}.hero-image:after{content:"東京";position:absolute;right:-12px;top:-50px;font-size:8rem;color:#ff75a933;font-weight:950;z-index:-1}
+main{max-width:1120px;margin:auto;padding:0 24px 80px}.intro{padding:45px 0 18px;text-align:center}.intro h2{font-size:clamp(2rem,4vw,3rem);margin:12px 0}.intro p{color:var(--lav);line-height:1.7}
+.topic{display:grid;grid-template-columns:.75fr 1.25fr;align-items:center;gap:38px;padding:52px 0;border-bottom:1px solid #ffffff1c}.topic:nth-child(even){grid-template-columns:1.25fr .75fr}.topic:nth-child(even) .topic-copy{order:2}.topic:nth-child(even) .image-button{order:1}
+.number{font-size:.8rem;color:var(--pink);font-weight:900;letter-spacing:.15em}h2{font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.045em;margin:8px 0 12px}.topic-copy>p:last-child{color:var(--lav);line-height:1.7}
+.image-button{border:1px solid #ffffff2b;padding:0;position:relative;background:var(--panel);border-radius:20px;overflow:hidden;cursor:zoom-in;text-align:left}.image-button img{display:block;width:100%;height:auto;transition:transform .35s}.image-button:hover img{transform:scale(1.025)}.image-button span{position:absolute;bottom:12px;right:12px;background:#0b0923d9;padding:8px 12px;border-radius:30px;font-size:.8rem}
+.quiz-section{padding:75px 0 30px}.quiz-section>p{color:var(--lav);line-height:1.7}.quiz-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.answer{display:flex;gap:15px;padding:19px;background:var(--panel);border:1px solid #ffffff1c;border-radius:16px}.answer>span{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#ff5b9a;color:white;font-weight:900}.answer strong{line-height:1.5}details{margin-top:12px;color:var(--lav)}summary{cursor:pointer;color:#ff9cbd;font-weight:750}details p{margin-bottom:0;color:white}
+.end{margin-top:75px;text-align:center;padding:65px 24px;border-radius:26px;background:linear-gradient(120deg,#3b174c,#1b1a4a);border:1px solid #ffffff25}.end h2{font-size:clamp(2.4rem,6vw,4.5rem)}.end p{color:var(--lav);line-height:1.7}
+footer{padding:28px 20px;text-align:center;border-top:1px solid #ffffff1c;color:#aaa5c7;font-size:.9rem}
+.lightbox{display:none;position:fixed;inset:0;background:#050414ed;z-index:50;align-items:center;justify-content:center;padding:22px}.lightbox.open{display:flex}.lightbox img{max-width:min(1100px,95vw);max-height:88vh;object-fit:contain;border-radius:14px}.close{position:absolute;top:18px;right:22px;background:white;color:#111;border:0;border-radius:50%;width:42px;height:42px;font-size:1.5rem;cursor:pointer}
+@media(max-width:780px){.nav{align-items:flex-start;flex-direction:column;padding:12px 16px}.navlinks{width:100%}.hero{grid-template-columns:1fr;min-height:0;padding:55px 20px;gap:32px}.topic,.topic:nth-child(even){grid-template-columns:1fr;gap:18px;padding:38px 0}.topic:nth-child(even) .topic-copy,.topic:nth-child(even) .image-button{order:initial}.quiz-grid{grid-template-columns:1fr}.hero-image:after{font-size:5rem}main{padding:0 18px 55px}}
+</style>
+</head><body>
+<header class="topbar"><div class="nav"><a class="brand" href="#start">TOKYO<b>.</b></a><nav class="navlinks" aria-label="Hauptnavigation"><a href="#traditionen">Traditionen</a><a href="#thema-3">Sehenswürdigkeiten</a><a href="#thema-4">Geschichte</a><a href="#thema-5">Steckbrief</a><a href="#thema-8">U-Bahn</a><a href="#quiz">Quiz</a><a href="#ende">Ende</a></nav></div></header>
+<section class="hero" id="start"><div><p class="eyebrow">日本へようこそ · Willkommen in Japan</p><h1>Entdecke<br><span>Tokyo.</span></h1><p class="lead">Eine Stadt voller Kontraste: jahrhundertealte Traditionen treffen auf moderne Architektur, leuchtende Straßen und faszinierende Technik. Begib dich auf eine kleine Reise durch Japans Hauptstadt.</p><a class="button" href="#traditionen">Tokyo erkunden ↓</a></div><div class="hero-image"><img src="assets/slide-1.png" alt="Tokyo – Titelbild aus der Präsentation"></div></section>
+<main><section class="intro" id="traditionen"><p class="eyebrow">Die Stadt kennenlernen</p><h2>Tokyo auf einen Blick</h2><p>Entdecke die Themen der Präsentation – vom kulturellen Erbe bis zum modernen Großstadtleben.</p></section>
+
+    <article class="topic" id="thema-2">
+      <div class="topic-copy"><span class="number">01</span><p class="eyebrow">TOKYO · JAPAN</p><h2>Feste &amp; Traditionen</h2><p>Traditionelle Feste, Natur und Kultur</p></div>
+      <button class="image-button" type="button" data-image="assets/slide-2.png" aria-label="Bild vergrößern: Feste &amp; Traditionen"><img src="assets/slide-2.png" alt="Feste &amp; Traditionen" loading="lazy"><span>Bild vergrößern ↗</span></button>
+    </article>
+    <article class="topic" id="thema-3">
+      <div class="topic-copy"><span class="number">02</span><p class="eyebrow">TOKYO · JAPAN</p><h2>Sehenswürdigkeiten</h2><p>Von historischen Tempeln bis zu leuchtenden Stadtvierteln</p></div>
+      <button class="image-button" type="button" data-image="assets/slide-3.png" aria-label="Bild vergrößern: Sehenswürdigkeiten"><img src="assets/slide-3.png" alt="Sehenswürdigkeiten" loading="lazy"><span>Bild vergrößern ↗</span></button>
+    </article>
+    <article class="topic" id="thema-4">
+      <div class="topic-copy"><span class="number">03</span><p class="eyebrow">TOKYO · JAPAN</p><h2>Der historische Hintergrund</h2><p>Wie aus Edo das moderne Tokyo wurde</p></div>
+      <button class="image-button" type="button" data-image="assets/slide-4.png" aria-label="Bild vergrößern: Der historische Hintergrund"><img src="assets/slide-4.png" alt="Der historische Hintergrund" loading="lazy"><span>Bild vergrößern ↗</span></button>
+    </article>
+    <article class="topic" id="thema-5">
+      <div class="topic-copy"><span class="number">04</span><p class="eyebrow">TOKYO · JAPAN</p><h2>Steckbrief</h2><p>Die wichtigsten Fakten über Tokyo</p></div>
+      <button class="image-button" type="button" data-image="assets/slide-5.png" aria-label="Bild vergrößern: Steckbrief"><img src="assets/slide-5.png" alt="Steckbrief" loading="lazy"><span>Bild vergrößern ↗</span></button>
+    </article>
+    <article class="topic" id="thema-6">
+      <div class="topic-copy"><span class="number">05</span><p class="eyebrow">TOKYO · JAPAN</p><h2>Wo liegt Tokyo?</h2><p>Lage, Koordinaten und Umgebung</p></div>
+      <button class="image-button" type="button" data-image="assets/slide-6.png" aria-label="Bild vergrößern: Wo liegt Tokyo?"><img src="assets/slide-6.png" alt="Wo liegt Tokyo?" loading="lazy"><span>Bild vergrößern ↗</span></button>
+    </article>
+    <article class="topic" id="thema-7">
+      <div class="topic-copy"><span class="number">06</span><p class="eyebrow">TOKYO · JAPAN</p><h2>Sonstige Besonderheiten</h2><p>Technik, Essen, Manga und mehr</p></div>
+      <button class="image-button" type="button" data-image="assets/slide-7.png" aria-label="Bild vergrößern: Sonstige Besonderheiten"><img src="assets/slide-7.png" alt="Sonstige Besonderheiten" loading="lazy"><span>Bild vergrößern ↗</span></button>
+    </article>
+    <article class="topic" id="thema-8">
+      <div class="topic-copy"><span class="number">07</span><p class="eyebrow">TOKYO · JAPAN</p><h2>Das U-Bahn-Netz</h2><p>Unterwegs in einer der größten Metropolen der Welt</p></div>
+      <button class="image-button" type="button" data-image="assets/slide-8.png" aria-label="Bild vergrößern: Das U-Bahn-Netz"><img src="assets/slide-8.png" alt="Das U-Bahn-Netz" loading="lazy"><span>Bild vergrößern ↗</span></button>
+    </article>
+    <article class="topic" id="thema-9">
+      <div class="topic-copy"><span class="number">08</span><p class="eyebrow">TOKYO · JAPAN</p><h2>Warum Tokyo?</h2><p>Gründe für die Wahl dieser faszinierenden Stadt</p></div>
+      <button class="image-button" type="button" data-image="assets/slide-9.png" aria-label="Bild vergrößern: Warum Tokyo?"><img src="assets/slide-9.png" alt="Warum Tokyo?" loading="lazy"><span>Bild vergrößern ↗</span></button>
+    </article>
+<section class="quiz-section" id="quiz"><p class="eyebrow">Wissen testen</p><h2>Das Tokyo-Quiz</h2><p>Sechs Fragen über Tokyo. Überlege zuerst selbst und öffne danach die jeweilige Lösung.</p><div class="quiz-grid"><div class="answer"><span>1</span><div><strong>In welchem Land liegt Tokyo?</strong><details><summary>Lösung anzeigen</summary><p>Japan</p></details></div></div><div class="answer"><span>2</span><div><strong>Wie hieß Tokyo früher?</strong><details><summary>Lösung anzeigen</summary><p>Edo</p></details></div></div><div class="answer"><span>3</span><div><strong>Wie heißt der berühmte rote Fernsehturm in Tokyo?</strong><details><summary>Lösung anzeigen</summary><p>Tokyo Tower</p></details></div></div><div class="answer"><span>4</span><div><strong>Wie hoch ist der Tokyo Skytree?</strong><details><summary>Lösung anzeigen</summary><p>634 Meter</p></details></div></div><div class="answer"><span>5</span><div><strong>Wie heißt das Fest zur Kirschblütenzeit?</strong><details><summary>Lösung anzeigen</summary><p>Hanami</p></details></div></div><div class="answer"><span>6</span><div><strong>Welche zwei Religionen sind in Japan besonders verbreitet?</strong><details><summary>Lösung anzeigen</summary><p>Shintoismus und Buddhismus</p></details></div></div></div></section>
+<section class="end" id="ende"><p class="eyebrow">ありがとう · Arigatō</p><h2>Vielen Dank!</h2><p>Das war unsere kleine Reise durch Tokyo. Danke fürs Anschauen und Mitmachen beim Quiz.</p><a class="button" href="#start">Zurück zum Anfang ↑</a></section></main>
+<footer>東京 · TOKYO — Eine Entdeckungsreise durch Japans Hauptstadt</footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht"><button class="close" id="close" aria-label="Schließen">×</button><img id="lightbox-img" alt=""></div>
+<script>
+const box=document.getElementById('lightbox'), big=document.getElementById('lightbox-img');
+document.querySelectorAll('.image-button').forEach(b=>b.addEventListener('click',()=>{big.src=b.dataset.image;big.alt=b.querySelector('img').alt;box.classList.add('open')}));
+function closeBox(){box.classList.remove('open');big.src=''}
+document.getElementById('close').addEventListener('click',closeBox);
+box.addEventListener('click',e=>{if(e.target===box)closeBox()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox()});
+</script>
+</body></html>
